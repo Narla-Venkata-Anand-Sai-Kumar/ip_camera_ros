@@ -21,7 +21,7 @@ if __name__ == '__main__':
     # $ python3 ip_camera.py -u YOUR_IP_CAMERA_URL -g
     parser = argparse.ArgumentParser(prog='ip_camera.py', description='Reads a given URL string and dumps it to a ROS image topic')
     parser.add_argument('-g', '--gui', action='store_true', help='Show a GUI of the camera stream')
-    parser.add_argument('-u', '--url', default='http://192.168.43.1:8080/video', help='Camera stream URL to parse')
+    parser.add_argument('-u', '--url', default='http://192.168.12.82:8080/video', help='Camera stream URL to parse')
     args = parser.parse_args(rospy.myargv(argv=sys.argv[1:]))
     
     rospy.init_node('ip_camera', anonymous=True)
